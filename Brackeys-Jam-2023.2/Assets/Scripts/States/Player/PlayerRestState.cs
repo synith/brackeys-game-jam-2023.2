@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerRestState : MonoBehaviour
+public class PlayerRestState : PlayerBaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    public PlayerRestState(PlayerStateMachine playerStateMachine) : base(playerStateMachine)
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public override void UpdatePhysics() {
+        Debug.Log("hi");
     }
 }

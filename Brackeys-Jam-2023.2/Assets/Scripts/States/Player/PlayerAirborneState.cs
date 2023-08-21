@@ -1,18 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerAirborneState : MonoBehaviour
+public class PlayerAirborneState : PlayerBaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    public PlayerAirborneState(PlayerStateMachine playerStateMachine) : base(playerStateMachine)
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void EnterState()
     {
-        
+        throw new System.NotImplementedException();
+    }
+
+    public override void ExitState()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void UpdateFrame() {
+        throw new System.NotImplementedException();
+    }
+
+    public override void UpdatePhysics(){
+        throw new System.NotImplementedException();
     }
 }
