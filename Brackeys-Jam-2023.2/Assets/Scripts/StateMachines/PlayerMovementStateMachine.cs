@@ -15,7 +15,6 @@ public class PlayerMovementStateMachine : MonoBehaviour
 
     // Parameters
     private const float _MOVEMENT_SPEED = 5f;
-    private const float _JUMP_STRENGTH = 10f;
 
     void Awake()
     {
@@ -38,7 +37,6 @@ public class PlayerMovementStateMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleJump();
         _currentState.UpdateFrame();
     }
 
@@ -46,14 +44,6 @@ public class PlayerMovementStateMachine : MonoBehaviour
     {
         HandleMovement();
         _currentState.UpdatePhysics();
-    }
-
-    private void HandleJump()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            playerRigidBody2D.AddForce(Vector2.up * _JUMP_STRENGTH);
-        }
     }
 
     private void HandleMovement()
