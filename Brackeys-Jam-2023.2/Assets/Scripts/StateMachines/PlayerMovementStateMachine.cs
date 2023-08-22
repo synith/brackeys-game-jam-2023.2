@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStateMachine : MonoBehaviour
+public class PlayerMovementStateMachine : MonoBehaviour
 {
     // Fields
     internal Rigidbody2D playerRigidBody2D;
     internal float targetVelocity;
 
     // States
-    private PlayerBaseState _currentState;
+    private PlayerMovementBaseState _currentState;
     internal PlayerRestState playerRestState;
     internal PlayerMoveState playerMoveState;
-    internal PlayerAirborneState playerAirborneState;
 
     // Parameters
     private const float _MOVEMENT_SPEED = 5f;
@@ -27,7 +26,6 @@ public class PlayerStateMachine : MonoBehaviour
     {
         playerRestState = new PlayerRestState(this);
         playerMoveState = new PlayerMoveState(this);
-        playerAirborneState = new PlayerAirborneState(this);
     }
 
     // Start is called before the first frame update
@@ -82,7 +80,7 @@ public class PlayerStateMachine : MonoBehaviour
         }
     }
 
-    private void ChangeState(PlayerBaseState newState)
+    private void ChangeState(PlayerMovementBaseState newState)
     {
         _currentState.ExitState();
         _currentState = newState;

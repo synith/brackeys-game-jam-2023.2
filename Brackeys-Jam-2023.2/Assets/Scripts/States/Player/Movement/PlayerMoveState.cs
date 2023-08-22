@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class PlayerMoveState : PlayerBaseState
+public class PlayerMoveState : PlayerMovementBaseState
 {
-    public PlayerMoveState(PlayerStateMachine playerStateMachine) : base(playerStateMachine)
+    public PlayerMoveState(PlayerMovementStateMachine playerStateMachine) : base(playerStateMachine)
     {
 
     }
