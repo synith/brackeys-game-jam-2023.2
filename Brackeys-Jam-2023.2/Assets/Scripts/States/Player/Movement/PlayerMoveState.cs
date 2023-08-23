@@ -9,8 +9,8 @@ public class PlayerMoveState : PlayerMovementBaseState
 
     public override void UpdatePhysics()
     {
-        Vector2 velocity = playerStateMachine.playerRigidBody2D.velocity;
-        velocity.x = Mathf.Lerp(playerStateMachine.playerRigidBody2D.velocity.x, playerStateMachine.targetVelocity, ACCELERATION_SPEED);
-        playerStateMachine.playerRigidBody2D.velocity = velocity;
+        Vector2 velocity = stateMachine.playerRigidBody2D.velocity;
+        velocity.x = Mathf.Lerp(stateMachine.playerRigidBody2D.velocity.x, stateMachine.targetVelocity, ACCELERATION_SPEED);
+        stateMachine.playerRigidBody2D.velocity = velocity;
     }
 }

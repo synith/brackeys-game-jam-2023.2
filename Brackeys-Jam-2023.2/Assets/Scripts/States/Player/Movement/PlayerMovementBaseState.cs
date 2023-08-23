@@ -1,14 +1,14 @@
 public abstract class PlayerMovementBaseState : IState
 {
-    private protected PlayerMovementStateMachine playerStateMachine;
+    private protected PlayerMovementStateMachine stateMachine;
 
     // Parameters
     private protected const float ACCELERATION_SPEED = 0.1f;
     private protected const float DECELERATION_SPEED = 0.1f;
 
-    public PlayerMovementBaseState(PlayerMovementStateMachine playerStateMachine)
+    public PlayerMovementBaseState(PlayerMovementStateMachine playerMovementStateMachine)
     {
-        this.playerStateMachine = playerStateMachine;
+        stateMachine = playerMovementStateMachine;
     }
 
     public virtual void EnterState()
