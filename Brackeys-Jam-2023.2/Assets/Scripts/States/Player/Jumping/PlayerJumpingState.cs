@@ -12,5 +12,8 @@ public class PlayerJumpingState : PlayerJumpingBaseState
         if (IsGrounded()) {
             stateMachine.ChangeState(stateMachine.playerGroundedState);
         }
+        else if (stateMachine.playerRigidBody2D.velocity.y < 0) {
+            stateMachine.ChangeState(stateMachine.playerFallingState);
+        }
     }
 }
