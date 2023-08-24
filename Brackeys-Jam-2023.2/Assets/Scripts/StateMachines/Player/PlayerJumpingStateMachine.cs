@@ -6,12 +6,16 @@ public class PlayerJumpingStateMachine : MonoBehaviour
 {
     // Fields
     internal Rigidbody2D playerRigidBody2D;
+    internal BoxCollider2D boxCollider;
 
     // States
     private PlayerJumpingBaseState _currentState;
     internal PlayerGroundedState playerGroundedState;
     internal PlayerJumpingState playerJumpingState;
     internal PlayerFallingState playerFallingState; 
+
+    // Parameters
+    internal const float JUMP_VELOCITY = 10f;
 
     void Awake()
     {
@@ -30,6 +34,8 @@ public class PlayerJumpingStateMachine : MonoBehaviour
     {
         _currentState = playerGroundedState;
         playerRigidBody2D = GetComponent<Rigidbody2D>();
+        playerRigidBody2D.freezeRotation = true;
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
