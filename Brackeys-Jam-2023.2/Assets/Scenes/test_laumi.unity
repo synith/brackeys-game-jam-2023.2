@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 507273327}
   - component: {fileID: 507273326}
   - component: {fileID: 507273325}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,8 +575,9 @@ GameObject:
   - component: {fileID: 1536460176}
   - component: {fileID: 1536460175}
   - component: {fileID: 1536460174}
+  - component: {fileID: 1536460178}
   - component: {fileID: 1536460177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +679,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -693,6 +694,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.99999994}
   m_EdgeRadius: 0
+--- !u!251 &1536460178
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536460172}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &1783075870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -701,6 +721,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2771352123953907799, guid: 280f5f7c9d13bb548b99360dd15a5ff5,
+        type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 3107943468142691276, guid: 280f5f7c9d13bb548b99360dd15a5ff5,
         type: 3}
       propertyPath: m_Name
@@ -782,7 +807,7 @@ GameObject:
   - component: {fileID: 2124662845}
   - component: {fileID: 2124662844}
   - component: {fileID: 2124662843}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
