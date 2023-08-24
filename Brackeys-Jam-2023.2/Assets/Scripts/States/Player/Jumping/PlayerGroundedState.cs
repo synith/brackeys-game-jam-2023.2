@@ -15,7 +15,6 @@ public class PlayerGroundedState : PlayerJumpingBaseState
 
     private void HandleJump()
     {
-        Debug.Log(IsGrounded());
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             Vector2 newVelocity = stateMachine.playerRigidBody2D.velocity;
