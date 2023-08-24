@@ -8,23 +8,30 @@ public class PlayerGroundedState : PlayerJumpingBaseState
     {
     }
 
-    public override void UpdateFrame() {
+    public override void UpdateFrame()
+    {
         HandleJump();
     }
 
-    private void HandleJump() {
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded()) {
+    private void HandleJump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
 
         }
     }
 
-    public override void UpdatePhysics() {
-        if (!IsGrounded()) {
-           if (stateMachine.playerRigidBody2D.velocity.y > 0) {
-                stateMachine.ChangeState(stateMachine.playerJumpingState);
-           } else {
-                stateMachine.ChangeState(stateMachine.playerFallingState);
-           }
+    public override void UpdatePhysics()
+    {
+
+        if (stateMachine.playerRigidBody2D.velocity.y > 0 && !IsGrounded())
+        {
+            stateMachine.ChangeState(stateMachine.playerJumpingState);
         }
+        else if (stateMachine.playerRigidBody2D.velocity.y < 0 && !IsGrounded())
+        {
+            stateMachine.ChangeState(stateMachine.playerFallingState);
+        }
+
     }
 }
