@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public abstract class PlayerStatusBaseState : IState
 {
     private protected PlayerStatusStateMachine stateMachine;
@@ -27,4 +29,7 @@ public abstract class PlayerStatusBaseState : IState
 
     }
 
+    public virtual void HandleCollision(Collision2D other) {
+
+    }
 }

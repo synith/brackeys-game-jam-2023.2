@@ -16,7 +16,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     // Parameters
     private const float _MOVEMENT_SPEED = 5f;
 
-    void Awake()
+    private void Awake()
     {
         InitializeStates();
     }
@@ -28,19 +28,19 @@ public class PlayerMovementStateMachine : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _currentState = playerRestState;
         playerRigidBody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         _currentState.UpdateFrame();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         HandleMovement();
         _currentState.UpdatePhysics();

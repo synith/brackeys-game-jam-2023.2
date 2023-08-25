@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class PlayerStatusStateMachine : MonoBehaviour
 {
+    // Fields
+    private int _oxygenCount;
+
     // States
     private PlayerStatusBaseState _currentState;
     internal PlayerStatusNormalState playerStatusNormalState;
     internal PlayerStatusInvulnerableState playerStatusInvulnerableState;
 
-    void Awake()
+    // Parameters
+    internal int maxOxygenCapacity;
+
+    private void Awake()
     {
         InitializeStates();
+        maxOxygenCapacity = 100;
+        _oxygenCount = maxOxygenCapacity;
     }
 
     private void InitializeStates()
@@ -21,20 +29,29 @@ public class PlayerStatusStateMachine : MonoBehaviour
     }   
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _currentState = playerStatusInvulnerableState;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         _currentState.UpdateFrame();
     }
 
-    void FixedUpdate() 
+    private void FixedUpdate() 
     {
-        _currentState.UpdatePhysics();
+        if (haveO2()) {
+            
+        }
+        else {
+            _currentState.UpdatePhysics();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        _currentState.HandleCollision(other);
     }
 
     private void ChangeState(PlayerStatusBaseState newState)
@@ -42,5 +59,13 @@ public class PlayerStatusStateMachine : MonoBehaviour
         _currentState.ExitState();
         _currentState = newState;
         _currentState.EnterState();
+    }
+
+    public void TakeDamage(int damage) {
+        _oxygenCount -= damage;
+    }
+
+    private bool haveO2() {
+        return _oxygenCount > 0;
     }
 }

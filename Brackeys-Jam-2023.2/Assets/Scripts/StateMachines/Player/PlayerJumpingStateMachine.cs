@@ -17,7 +17,7 @@ public class PlayerJumpingStateMachine : MonoBehaviour
     // Parameters
     internal const float JUMP_VELOCITY = 10f;
 
-    void Awake()
+    private void Awake()
     {
         InitializeStates();
     }
@@ -30,7 +30,7 @@ public class PlayerJumpingStateMachine : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _currentState = playerGroundedState;
         playerRigidBody2D = GetComponent<Rigidbody2D>();
@@ -39,12 +39,12 @@ public class PlayerJumpingStateMachine : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         _currentState.UpdateFrame();
     }
 
-     void FixedUpdate() {
+    private void FixedUpdate() {
         _currentState.UpdatePhysics();
     }
 
