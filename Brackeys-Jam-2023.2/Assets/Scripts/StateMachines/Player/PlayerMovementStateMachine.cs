@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerMovementStateMachine : MonoBehaviour
 {
-    // Fields
+    // Components
     internal Rigidbody2D playerRigidBody2D;
+    private SpriteRenderer _spriteRenderer;
+
+    // Fields
     internal float targetVelocity;
 
     // States
@@ -32,6 +35,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     {
         _currentState = playerRestState;
         playerRigidBody2D = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -61,11 +65,13 @@ public class PlayerMovementStateMachine : MonoBehaviour
             {
                 targetVelocity = -_MOVEMENT_SPEED;
                 ChangeState(playerMoveState);
+                _spriteRenderer.flipX = true;
             }
             else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             {
                 targetVelocity = _MOVEMENT_SPEED;
                 ChangeState(playerMoveState);
+                _spriteRenderer.flipX = false;
             }
         }
     }
