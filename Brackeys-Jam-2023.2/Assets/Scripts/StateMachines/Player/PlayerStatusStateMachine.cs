@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStatusStateMachine : MonoBehaviour
 {
     // Fields
-    private int _oxygenCount;
+    internal int oxygenCount;
 
     // States
     private PlayerStatusBaseState _currentState;
@@ -19,7 +19,7 @@ public class PlayerStatusStateMachine : MonoBehaviour
     {
         InitializeStates();
         maxOxygenCapacity = 100;
-        _oxygenCount = maxOxygenCapacity;
+        oxygenCount = maxOxygenCapacity;
     }
 
     private void InitializeStates()
@@ -60,12 +60,12 @@ public class PlayerStatusStateMachine : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        _oxygenCount -= damage;
+        oxygenCount -= damage;
     }
 
     private bool HaveO2()
     {
-        return _oxygenCount > 0;
+        return oxygenCount > 0;
     }
 
     internal void ChangeState(PlayerStatusBaseState newState)

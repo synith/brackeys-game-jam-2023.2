@@ -30,6 +30,8 @@ public abstract class PlayerStatusBaseState : IState
     }
 
     public virtual void HandleCollision(Collision2D other) {
-
+        if (other.gameObject.layer == LayerMask.NameToLayer("Collectable")) {
+            stateMachine.oxygenCount = stateMachine.maxOxygenCapacity;
+        }
     }
 }
