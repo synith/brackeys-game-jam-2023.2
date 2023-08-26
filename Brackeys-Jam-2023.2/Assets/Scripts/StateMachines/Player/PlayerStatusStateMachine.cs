@@ -42,7 +42,7 @@ public class PlayerStatusStateMachine : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        if (haveO2()) {
+        if (HaveO2()) {
             
         }
         else {
@@ -54,18 +54,18 @@ public class PlayerStatusStateMachine : MonoBehaviour
         _currentState.HandleCollision(other);
     }
 
+    public void TakeDamage(int damage) {
+        _oxygenCount -= damage;
+    }
+
+    private bool HaveO2() {
+        return _oxygenCount > 0;
+    }
+
     private void ChangeState(PlayerStatusBaseState newState)
     {
         _currentState.ExitState();
         _currentState = newState;
         _currentState.EnterState();
-    }
-
-    public void TakeDamage(int damage) {
-        _oxygenCount -= damage;
-    }
-
-    private bool haveO2() {
-        return _oxygenCount > 0;
     }
 }
