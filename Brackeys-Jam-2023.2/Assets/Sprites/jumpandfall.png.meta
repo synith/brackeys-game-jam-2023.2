@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a9ac7af719a8d0b4ea913a1d4918f58b
+guid: 0039f2f8a185008489269c872cc3309a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -107,7 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Server
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -120,8 +120,8 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 512
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -133,8 +133,8 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 512
+    buildTarget: Server
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -149,13 +149,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slime_0
+      name: jumpandfall_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 15
         y: 0
-        width: 62
-        height: 50
+        width: 38
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 153562619c48cdb4686b2e0026b06b53
-      internalID: 1178938296
+      spriteID: 60058dd43741aac458835df1146eed0c
+      internalID: 1698019373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_1
+      name: jumpandfall_1
       rect:
         serializedVersion: 2
-        x: 88
+        x: 81
         y: 0
-        width: 63
-        height: 55
+        width: 38
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5861b6dd305f4c041b9bd724a65b285c
-      internalID: -567909627
+      spriteID: c1fc82ab8236c4449b6fbe941f252efe
+      internalID: -661503208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_2
+      name: jumpandfall_2
       rect:
         serializedVersion: 2
-        x: 165
-        y: 0
-        width: 64
-        height: 55
+        x: 146
+        y: 1
+        width: 33
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8833e6f040257849a805eaeaa158e49
-      internalID: 1447621020
+      spriteID: a1c8e79dc3a966c4e8c3629212212d4b
+      internalID: -735472871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_3
+      name: jumpandfall_3
       rect:
         serializedVersion: 2
-        x: 245
-        y: 0
-        width: 62
-        height: 50
+        x: 213
+        y: 9
+        width: 32
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d6c3ce5b24613f46bd442ab25693075
-      internalID: -499265689
+      spriteID: 8cd839100dd6de54bbafc491a781084a
+      internalID: 1155661373
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_4
+      name: jumpandfall_4
       rect:
         serializedVersion: 2
-        x: 331
-        y: 0
-        width: 62
-        height: 50
+        x: 279
+        y: 18
+        width: 32
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +247,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9381deaa6872c824e9aaa3a6f6a4f2da
-      internalID: -1820413910
+      spriteID: 66d7825cc40317c4683dfd278907fd93
+      internalID: -1702994476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpandfall_5
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 17
+        width: 45
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f416f703ed4d61d4e967fa8cb9fef3db
+      internalID: 999420000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpandfall_6
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 13
+        width: 52
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42dfd20599673354d9798cfba6fcdcb9
+      internalID: 1821199118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpandfall_7
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 6
+        width: 51
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decdc5d113ceae646a20839bc9f5fa71
+      internalID: -566135686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpandfall_8
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 4
+        width: 42
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53d76687286db3408e5c5bafcb381f0
+      internalID: 402973746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpandfall_9
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 2
+        width: 41
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e4a2c7a1628bc4d967bab3afd78004
+      internalID: -724556828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpandfall_10
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 0
+        width: 38
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aedc77cdfd92354a87e29ddd9a5094d
+      internalID: -1355812540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpandfall_11
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 0
+        width: 38
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620062d31fc55794ab211cadf5c4c260
+      internalID: -1817268662
       vertices: []
       indices: 
       edges: []
@@ -264,11 +411,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      slime_0: 1178938296
-      slime_1: -567909627
-      slime_2: 1447621020
-      slime_3: -499265689
-      slime_4: -1820413910
+      jumpandfall_0: 1698019373
+      jumpandfall_1: -661503208
+      jumpandfall_10: -1355812540
+      jumpandfall_11: -1817268662
+      jumpandfall_2: -735472871
+      jumpandfall_3: 1155661373
+      jumpandfall_4: -1702994476
+      jumpandfall_5: 999420000
+      jumpandfall_6: 1821199118
+      jumpandfall_7: -566135686
+      jumpandfall_8: 402973746
+      jumpandfall_9: -724556828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

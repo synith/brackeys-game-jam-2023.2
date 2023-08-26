@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] Transform _target;
     [SerializeField] float _speed=400f;
     [SerializeField] float _nextWaypointDistance = 3f;
+    [SerializeField] bool _isFlying;
 
     Path _path;
     int _currentWaypoint = 0;
@@ -49,8 +50,13 @@ public class EnemyAI : MonoBehaviour
         Vector2 direction = ((Vector2)_path.vectorPath[_currentWaypoint]-_rb.position).normalized;
 
         Vector2 force = direction * _speed * Time.deltaTime;
-
+        if (_isFlying == false)
+        {
+            _rb.AddForce(new Vector2(0, -3f));
+        }
         _rb.AddForce(force);
+        
+       
 
         float distance = Vector2.Distance(_rb.position, _path.vectorPath[_currentWaypoint]);
 
