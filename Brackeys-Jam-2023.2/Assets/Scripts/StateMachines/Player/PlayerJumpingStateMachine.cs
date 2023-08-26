@@ -50,7 +50,10 @@ public class PlayerJumpingStateMachine : MonoBehaviour
 
     internal void ChangeState(PlayerJumpingBaseState newState)
     {
-        _currentState.ExitState();
+        if (newState != null)
+        {
+            _currentState.ExitState();
+        }
         _currentState = newState;
         _currentState.EnterState();
     }

@@ -72,7 +72,10 @@ public class PlayerMovementStateMachine : MonoBehaviour
 
     private void ChangeState(PlayerMovementBaseState newState)
     {
-        _currentState.ExitState();
+        if (newState != null)
+        {
+            _currentState.ExitState();
+        }
         _currentState = newState;
         _currentState.EnterState();
     }

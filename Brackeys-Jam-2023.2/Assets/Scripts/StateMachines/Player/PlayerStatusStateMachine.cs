@@ -26,12 +26,13 @@ public class PlayerStatusStateMachine : MonoBehaviour
     {
         playerStatusNormalState = new PlayerStatusNormalState(this);
         playerStatusInvulnerableState = new PlayerStatusInvulnerableState(this);
-    }   
+    }
 
     // Start is called before the first frame update
     private void Start()
     {
         _currentState = playerStatusInvulnerableState;
+        _currentState.EnterState();
     }
 
     // Update is called once per frame
@@ -40,31 +41,39 @@ public class PlayerStatusStateMachine : MonoBehaviour
         _currentState.UpdateFrame();
     }
 
-    private void FixedUpdate() 
+    private void FixedUpdate()
     {
-        if (HaveO2()) {
-            
+        if (HaveO2())
+        {
+
         }
-        else {
+        else
+        {
             _currentState.UpdatePhysics();
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D other)
+    {
         _currentState.HandleCollision(other);
     }
 
-    public void TakeDamage(int damage) {
+    public void TakeDamage(int damage)
+    {
         _oxygenCount -= damage;
     }
 
-    private bool HaveO2() {
+    private bool HaveO2()
+    {
         return _oxygenCount > 0;
     }
 
-    private void ChangeState(PlayerStatusBaseState newState)
+    internal void ChangeState(PlayerStatusBaseState newState)
     {
-        _currentState.ExitState();
+        if (newState != null)
+        {
+            _currentState.ExitState();
+        }
         _currentState = newState;
         _currentState.EnterState();
     }

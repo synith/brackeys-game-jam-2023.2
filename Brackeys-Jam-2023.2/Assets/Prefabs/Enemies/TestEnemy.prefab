@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7246220037129850386}
   - component: {fileID: 6029804097289265767}
   - component: {fileID: -5333094032306695363}
-  m_Layer: 0
-  m_Name: Enemy
+  m_Layer: 8
+  m_Name: TestEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 951
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
