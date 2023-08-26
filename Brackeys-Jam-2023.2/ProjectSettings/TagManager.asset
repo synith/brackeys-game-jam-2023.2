@@ -11,11 +11,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Solid
+  - Player
+  - Enemy
+  - PlayerProjectile
+  - Collectable
   - 
   - 
   - 

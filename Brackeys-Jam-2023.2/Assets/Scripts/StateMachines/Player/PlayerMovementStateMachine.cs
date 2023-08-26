@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerMovementStateMachine : MonoBehaviour
 {
-    // Fields
+    // Components
     internal Rigidbody2D playerRigidBody2D;
+    private SpriteRenderer _spriteRenderer;
+
+    // Fields
     internal float targetVelocity;
 
     // States
@@ -16,7 +19,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     // Parameters
     private const float _MOVEMENT_SPEED = 5f;
 
-    void Awake()
+    private void Awake()
     {
         InitializeStates();
     }
@@ -28,19 +31,20 @@ public class PlayerMovementStateMachine : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _currentState = playerRestState;
         playerRigidBody2D = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         _currentState.UpdateFrame();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         HandleMovement();
         _currentState.UpdatePhysics();
@@ -61,18 +65,23 @@ public class PlayerMovementStateMachine : MonoBehaviour
             {
                 targetVelocity = -_MOVEMENT_SPEED;
                 ChangeState(playerMoveState);
+                _spriteRenderer.flipX = true;
             }
             else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             {
                 targetVelocity = _MOVEMENT_SPEED;
                 ChangeState(playerMoveState);
+                _spriteRenderer.flipX = false;
             }
         }
     }
 
     private void ChangeState(PlayerMovementBaseState newState)
     {
-        _currentState.ExitState();
+        if (newState != null)
+        {
+            _currentState.ExitState();
+        }
         _currentState = newState;
         _currentState.EnterState();
     }
