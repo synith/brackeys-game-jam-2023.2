@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using UnityEngine;
 
 public class PlayerStatusInvulnerableState : PlayerStatusBaseState
 {
@@ -10,6 +11,12 @@ public class PlayerStatusInvulnerableState : PlayerStatusBaseState
     }
 
     public override void EnterState() {
+        //stateMachine.spriteRenderer.color = Color.red;
         Task.Delay(INVULNERABILITY_DURATION).ContinueWith(t => stateMachine.ChangeState(stateMachine.playerStatusNormalState));
     }
+
+    public override void ExitState() {
+        //stateMachine.spriteRenderer.color = Color.white;
+    }
+
 }

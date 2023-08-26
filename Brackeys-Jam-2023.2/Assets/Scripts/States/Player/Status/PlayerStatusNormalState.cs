@@ -14,7 +14,7 @@ public class PlayerStatusNormalState : PlayerStatusBaseState
         base.HandleCollision(other);
         if (other.gameObject.layer == LayerMask.NameToLayer("Enemy")) {
             Debug.Log("ouch");
-            stateMachine.TakeDamage(1);
+            stateMachine.TakeDamage(1f);
             stateMachine.ChangeState(stateMachine.playerStatusInvulnerableState);
         }
     }
