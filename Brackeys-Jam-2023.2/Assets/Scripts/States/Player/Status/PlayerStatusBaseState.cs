@@ -44,11 +44,11 @@ public abstract class PlayerStatusBaseState : IState
             }
             else if (collectable.collectableType == CollectableType.Key)
             {
-                GameStateMachine.keyCount++;
+                GameStateMachine.IncreaseKeyCount();;
             }
             else if (collectable.collectableType == CollectableType.Scrap)
             {
-                GameStateMachine.scrapCount++;
+                GameStateMachine.IncreaseScrapCount();
             }
 
             Object.Destroy(other.gameObject);
