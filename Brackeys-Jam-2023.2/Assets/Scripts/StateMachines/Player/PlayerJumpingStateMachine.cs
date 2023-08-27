@@ -15,7 +15,7 @@ public class PlayerJumpingStateMachine : MonoBehaviour
     internal PlayerFallingState playerFallingState; 
 
     // Parameters
-    internal const float JUMP_VELOCITY = 7.5f;
+    internal const float JUMP_VELOCITY = 9f;
 
     private void Awake()
     {
