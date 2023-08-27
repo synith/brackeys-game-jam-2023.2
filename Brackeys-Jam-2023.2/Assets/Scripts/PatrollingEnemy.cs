@@ -37,8 +37,5 @@ public class PatrollingEnemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage()
-    {
-        gameObject.SetActive(false);
-    }
+    
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8925498127686923036}
   - component: {fileID: 6045263502965105888}
   - component: {fileID: 7349857501906323012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Black Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
