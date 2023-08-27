@@ -558,6 +558,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5148187700688146522, guid: 280f5f7c9d13bb548b99360dd15a5ff5,
+        type: 3}
+      propertyPath: field of view
+      value: 127.235146
+      objectReference: {fileID: 0}
     - target: {fileID: 5959380506744924354, guid: 280f5f7c9d13bb548b99360dd15a5ff5,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -621,7 +626,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3107943468142691276, guid: 280f5f7c9d13bb548b99360dd15a5ff5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1756238944}
   m_SourcePrefab: {fileID: 100100000, guid: 280f5f7c9d13bb548b99360dd15a5ff5, type: 3}
 --- !u!1 &457661389
 GameObject:
@@ -793,6 +802,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &557733137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3107943468142691276, guid: 280f5f7c9d13bb548b99360dd15a5ff5,
+    type: 3}
+  m_PrefabInstance: {fileID: 190782776}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &593395443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2786,12 +2801,27 @@ Transform:
   - {fileID: 78285025}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1756238937 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5959380506744924354, guid: 280f5f7c9d13bb548b99360dd15a5ff5,
-    type: 3}
-  m_PrefabInstance: {fileID: 190782776}
+--- !u!95 &1756238944
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557733137}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4135fb1d93229fe4aaee57074b9bdb9b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1757172804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3712,10 +3742,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: _target
-      value: 
-      objectReference: {fileID: 1756238937}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
