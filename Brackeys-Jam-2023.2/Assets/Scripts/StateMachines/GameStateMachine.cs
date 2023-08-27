@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GameStateMachine : MonoBehaviour
 {
+    // Static fields
+    internal static short keyCount = 0;
+    internal static int scrapCount = 0;
+
     private void Awake() {
         DontDestroyOnLoad(this.gameObject);
     }
