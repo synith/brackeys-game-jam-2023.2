@@ -7,6 +7,10 @@ public class PlayerMoveState : PlayerMovementBaseState
 
     }
 
+    public override void EnterState() {
+        stateMachine.animator.SetBool("isWalking", true);
+    }
+
     public override void UpdatePhysics()
     {
         Vector2 velocity = stateMachine.playerRigidBody2D.velocity;

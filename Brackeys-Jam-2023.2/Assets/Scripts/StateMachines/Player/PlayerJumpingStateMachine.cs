@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerJumpingStateMachine : MonoBehaviour
 {
-    // Fields
+    // Components
     internal Rigidbody2D playerRigidBody2D;
     internal BoxCollider2D boxCollider;
+    internal Animator animator;
 
     // States
     private PlayerJumpingBaseState _currentState;
@@ -36,6 +37,7 @@ public class PlayerJumpingStateMachine : MonoBehaviour
         playerRigidBody2D = GetComponent<Rigidbody2D>();
         playerRigidBody2D.freezeRotation = true;
         boxCollider = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame

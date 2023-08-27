@@ -8,6 +8,10 @@ public class PlayerJumpingState : PlayerJumpingBaseState
     {
     }
 
+    public override void EnterState() {
+        stateMachine.animator.SetBool("isJumping", true);
+    }
+
     public override void UpdatePhysics() {
         if (IsGrounded()) {
             stateMachine.ChangeState(stateMachine.playerGroundedState);

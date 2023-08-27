@@ -7,6 +7,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     // Components
     internal Rigidbody2D playerRigidBody2D;
     private SpriteRenderer _spriteRenderer;
+    internal Animator animator;
 
     // Fields
     internal float targetVelocity;
@@ -36,6 +37,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
         _currentState = playerRestState;
         playerRigidBody2D = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
