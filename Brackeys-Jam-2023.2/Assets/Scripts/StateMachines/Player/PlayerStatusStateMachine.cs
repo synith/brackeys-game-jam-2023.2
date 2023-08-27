@@ -7,7 +7,7 @@ public class PlayerStatusStateMachine : MonoBehaviour
 {
     // Components
     public GameObject _oxygenMeter;
-    //internal SpriteRenderer spriteRenderer;
+    internal SpriteRenderer spriteRenderer;
     private TextMeshProUGUI _oxygenDisplayTMP;
 
     // Fields
@@ -41,7 +41,7 @@ public class PlayerStatusStateMachine : MonoBehaviour
         _currentState = playerStatusInvulnerableState;
         _currentState.EnterState();
         _oxygenDisplayTMP = _oxygenMeter.GetComponent<TextMeshProUGUI>();
-        //spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -70,12 +70,17 @@ public class PlayerStatusStateMachine : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        spriteRenderer.color = Color.red;
         oxygenCount -= damage;
     }
 
     private bool HaveO2()
     {
         return oxygenCount > 0;
+    }
+
+    internal void ExitInvulnerability() {
+        ChangeState(playerStatusNormalState);
     }
 
     internal void ChangeState(PlayerStatusBaseState newState)
