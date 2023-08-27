@@ -70,7 +70,7 @@ public class PlayerStatusStateMachine : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        spriteRenderer.color = Color.red;
+        spriteRenderer.color = new Color(1f, 0.6f, 0.6f, 1f);
         oxygenCount -= damage;
     }
 

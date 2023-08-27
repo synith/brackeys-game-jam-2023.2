@@ -29,9 +29,28 @@ public abstract class PlayerStatusBaseState : IState
 
     }
 
-    public virtual void HandleCollision(Collision2D other) {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Collectable")) {
-            stateMachine.oxygenCount = stateMachine.maxOxygenCapacity;
+    public virtual void HandleCollision(Collision2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Collectable"))
+        {
+            Collectable collectable = other.gameObject.GetComponent<Collectable>();
+            if (collectable.collectableType == CollectableType.OxygenTank)
+            {
+                stateMachine.oxygenCount += 15;
+                if (stateMachine.oxygenCount > stateMachine.maxOxygenCapacity)
+                {
+                    stateMachine.oxygenCount = stateMachine.maxOxygenCapacity;
+                }
+            }
+            else if (collectable.collectableType == CollectableType.Key)
+            {
+                GameStateMachine.IncreaseKeyCount();;
+            }
+            else if (collectable.collectableType == CollectableType.Scrap)
+            {
+                GameStateMachine.IncreaseScrapCount();
+            }
+
             Object.Destroy(other.gameObject);
         }
     }

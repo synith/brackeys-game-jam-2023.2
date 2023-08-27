@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -451,7 +451,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &948109053
+--- !u!1001 &1033591395
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -467,12 +467,12 @@ PrefabInstance:
     - target: {fileID: 5959380506744924354, guid: 280f5f7c9d13bb548b99360dd15a5ff5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1558163
+      value: 2.9332783
       objectReference: {fileID: 0}
     - target: {fileID: 5959380506744924354, guid: 280f5f7c9d13bb548b99360dd15a5ff5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.9348989
+      value: 2.9613447
       objectReference: {fileID: 0}
     - target: {fileID: 5959380506744924354, guid: 280f5f7c9d13bb548b99360dd15a5ff5,
         type: 3}
@@ -940,5 +940,5 @@ SceneRoots:
   - {fileID: 2124662847}
   - {fileID: 1536460176}
   - {fileID: 784723125}
-  - {fileID: 948109053}
   - {fileID: 355158704}
+  - {fileID: 1033591395}
